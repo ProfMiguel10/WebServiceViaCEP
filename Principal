@@ -1,0 +1,16 @@
+package exemplo;
+
+import java.util.Scanner;
+
+public class Principal {
+	public static void main(String[] args) throws Exception {
+		System.out.print("Informe seu CEP: ");
+		Scanner in = new Scanner(System.in);
+		String cep = in.nextLine();
+		in.close();
+		Endereco endereco = AcessoWS.buscaEnderecoPelo(cep);
+		System.out.println("Logradouro: " + endereco.getLogradouro());
+		System.out.println("Bairro: " + endereco.getBairro());
+		System.out.println("Localidade: " + endereco.getLocalidade());
+	}
+}
