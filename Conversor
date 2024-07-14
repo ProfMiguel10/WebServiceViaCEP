@@ -1,0 +1,15 @@
+package exemplo;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+
+public class Conversor {
+	public static String jsonToString(BufferedReader bR) throws IOException {
+		String res, jsonToString = "";
+		while ((res = bR.readLine()) != null) {
+			jsonToString += res;
+
+		}
+		return jsonToString;
+	}
+}
